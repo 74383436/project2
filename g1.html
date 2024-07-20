@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>PIXEL</title>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+     </head>
+    <body>
+  <div class="container-fluid">
+  <div class="search_section"></div>
+   <nav class="navbar">
+      <div class="nav-links" id="navbarsExample01"> 
+      <ul class="nav-links">
+        <li class="active" ><a href="index.html">الصفحة الرئيسية</a>
+          <li class="active"><a href="about.html">نبذة عنا</a></li>
+          <li class="active"><a href="iq test.html">اختبار الذكاء</a></li>
+          <li class="active"><a href="game.html">الالعاب</a></li> 
+          <li class="active"><a href="treatment.html">العلاج</a></li>
+          <li class="active"><a href="education.html">البرامج التعليمية</a></li>
+          <li class="active"><a href="services.html">الخدمات</a></li>
+          <li class="active"><a href="contact.html">التواصل</a></li>
+          <a class="logo"><img src="images/logo3.png"></a>
+       </ul>
+</div>
+</nav></div>
+</div></div></div></div></div>
+<head>
+ <title>تطابق الالوان</title>
+    <style>
+  body { text-align: center;  
+      }
+      button { font-size: 16px; padding: 10px 20px; margin: 10px; }
+      .button {
+    background-color: #04AA6D; 
+    border: none;
+    color: rgb(12, 7, 7);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: #070702;
+  } 
+  .button2 {background-color: #f30d0d;} 
+  .button3 {background-color: #05a728;}  
+  .button4 {background-color: #110ec2;} 
+  .button5 {background-color: #dfec21;} 
+  .button6 {background-color: #7e0c6b;} 
+  .button7 {background-color: #f5600a;} 
+    </style>
+  </head>
+  <body>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+    <h1>تطابق الالوان </h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="color-box" style="width: 200px; height: 100px; margin: 20px auto;"></div>
+    <br>
+    <br>
+    <br>
+    <button class="button2" onclick= "checkMatch('red')">احمر</button>
+    <button class="button3" onclick="checkMatch('green')">اخضر</button>
+    <button class="button4" onclick="checkMatch('blue')">ازرق</button>
+    <button class="button5" onclick="checkMatch('yellow')">اصفر</button>
+    <button class="button6" onclick="checkMatch('purple')">بنفسجي</button>
+    <button class="button7" onclick="checkMatch('orange')">برتقالي</button>
+    <script>
+      var colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
+      var matchColor;
+       function startGame() {
+        matchColor = colors[Math.floor(Math.random() * colors.length)]; 
+        document.getElementById('color-box').style.backgroundColor = matchColor;
+      }
+      function checkMatch(color) {
+        if (color === matchColor) {
+          alert(' ✔ صحيح! لقد نجحت في تطابق اللون');
+          startGame();
+        } else {
+          alert(' ✕ غير صحيح! حاول مرة اخرى');
+        }
+      }
+      startGame();
+  </script>  
+  <br>
+  <br>
+  <br>
+  <br>
+    <br>
+    <br>
+  </body>
+</html>

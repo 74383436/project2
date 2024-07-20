@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>PIXEL</title>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+     </head>
+    <body>
+  <div class="container-fluid">
+  <div class="search_section"></div>
+   <nav class="navbar">
+      <div class="nav-links" id="navbarsExample01"> 
+      <ul class="nav-links">
+        <li class="active" ><a href="index.html">الصفحة الرئيسية</a>
+            <li class="active"><a href="about.html">نبذة عنا</a></li>
+            <li class="active"><a href="iq test.html">اختبار الذكاء</a></li>
+            <li class="active"><a href="game.html">الالعاب</a></li> 
+            <li class="active"><a href="treatment.html">العلاج</a></li>
+            <li class="active"><a href="education.html">البرامج التعليمية</a></li>
+            <li class="active"><a href="services.html">الخدمات</a></li>
+            <li class="active"><a href="contact.html">التواصل</a></li>
+            <a class="logo"><img src="images/logo3.png"></a>
+         </ul>
+</div>
+</nav></div>
+<title> انقر على الرقم الصحيح</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+          
+            padding: 20px;
+  }
+        .number {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .button {
+            background-color: #e97407;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 24px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #e47309 ;
+        align-items: center;
+    
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1> انقر على الرقم الصحيح</h1>
+    <div class="number" id="number">0</div>
+    <div class="buttons">
+        <button class="button" onclick="checkAnswer(1)">واحد</button>
+        <button class="button" onclick="checkAnswer(2)">اثنين</button>
+        <button class="button" onclick="checkAnswer(3)">ثلاثة</button>
+        <button class="button" onclick="checkAnswer(4)">اربعة</button>
+        <button class="button" onclick="checkAnswer(5)">خمسة</button>
+    </div>
+    <div class="result" id="result"></div>
+    <script>
+        let currentNumber = 0;
+        function generateNumber() {
+            currentNumber = Math.floor(Math.random() * 5) + 1;
+            document.getElementById('number').textContent = currentNumber;
+            document.getElementById('result').textContent = '';
+        }
+        function checkAnswer(selectedNumber) {
+            const resultDiv = document.getElementById('result');
+            if (selectedNumber === currentNumber) {
+                resultDiv.textContent = '✔ إجابة صحيحة!';
+                resultDiv.style.color = 'green';
+            } else {
+                resultDiv.textContent = '✕ إجابة خاطئة. حاول مرة أخرى!';
+                resultDiv.style.color = 'red';
+            }
+            setTimeout(generateNumber, 1000);
+        }
+        window.onload = generateNumber;
+    </script>
+</body>
+</html>
